@@ -7,3 +7,5 @@ const server=app.listen(PORT || 4000,()=>{
 })
 
 app.use(express.static(path.join(__dirname,'public')))
+
+// #3. 10:00 min
