@@ -123,3 +123,13 @@ body{
     background-color: #fff;
     cursor: pointer;
   }
+  .v-divider{
+    height: 48px;
+    width: 1x;
+    background-color: #000000;
+
+  }
+  .clients-total{
+    margin: 20px 0;
+    color: #7e7e7e;
+  }
