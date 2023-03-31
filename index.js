@@ -15,7 +15,7 @@ const socketsConnected=new Set();
 io.on('connection',onConnected);
 
 function onConnected(socket){
-    console.log(socket.id)
+    // console.log(socket.id)
     socketsConnected.add(socket.id);
 
     io.emit('clients-total',socketsConnected.size)
@@ -27,8 +27,9 @@ function onConnected(socket){
 
     })
     socket.on('message',(data)=>{
-        console.log(data)
         socket.broadcast.emit('chat-message',data);
     })
-
+    socket.on('feedback',(data)=>{
+        socket.broadcast.emit('feedback',data);
+    })
 }
